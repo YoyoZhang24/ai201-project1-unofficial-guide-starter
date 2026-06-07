@@ -14,6 +14,8 @@
      Example: "Student reviews of CS professors at [university] — useful because official
      course descriptions don't reflect teaching style, exam difficulty, or workload." -->
 
+Off-campus housing experiences at the University of Chicago. This knowledge is valuable because official university resources provide minimal guidance on the actual experience of renting in Hyde Park and nearby neighborhoods. They don't cover landlord quality, lease gotchas, neighborhood safety nuances, utility costs, or the unwritten norms that students learn only after moving in. The information is scattered across Reddit threads, student newspapers, and niche housing platforms, making it hard to find through any single official channel.
+
 ---
 
 ## Document Sources
