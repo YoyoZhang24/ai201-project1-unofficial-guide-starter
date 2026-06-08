@@ -20,17 +20,16 @@ Off-campus housing experiences at the University of Chicago. This knowledge is v
 | --- | ------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | Chicago Maroon      | Article guide to navigating off-campus housing    | [https://chicagomaroon.com/40981/news/navigating-the-maze-a-guide-to-off-campus-housing/](https://chicagomaroon.com/40981/news/navigating-the-maze-a-guide-to-off-campus-housing/)                                           |
 | 2   | Apartments.com      | Listings and reviews near UChicago                | [https://www.apartments.com/off-campus-housing/il/chicago/university-of-chicago/](https://www.apartments.com/off-campus-housing/il/chicago/university-of-chicago/)                                                           |
-| 3   | Facebook Group      | UChicago Housing community posts                  | [https://www.facebook.com/groups/uchicagohousing/](https://www.facebook.com/groups/uchicagohousing/)                                                                                                                         |
-| 4   | Maroon Housing      | Off-campus life guide                             | [https://maroonhousing.com/off-campus-life](https://maroonhousing.com/off-campus-life)                                                                                                                                       |
-| 5   | Maroon Housing      | Hyde Park neighborhood guide                      | [https://maroonhousing.com/neighborhood-guide/hyde-park](https://maroonhousing.com/neighborhood-guide/hyde-park)                                                                                                             |
-| 6   | For Rent University | UChicago off-campus listings and info             | [https://www.forrentuniversity.com/University-of-Chicago](https://www.forrentuniversity.com/University-of-Chicago)                                                                                                           |
-| 7   | Prked.com           | Ultimate guide to UChicago off-campus housing     | [https://prked.com/post/your-ultimate-guide-to-university-of-chicago-off-campus-housing](https://prked.com/post/your-ultimate-guide-to-university-of-chicago-off-campus-housing)                                             |
-| 8   | Casita              | Student accommodation guide for UChicago          | [https://www.casita.com/student-accommodation/usa/chicago/university-of-chicago](https://www.casita.com/student-accommodation/usa/chicago/university-of-chicago)                                                             |
-| 9   | Uhomes              | UChicago off-campus listings and tips             | [https://en.uhomes.com/us/chicago/university-of-chicago](https://en.uhomes.com/us/chicago/university-of-chicago)                                                                                                             |
-| 10  | Domu                | Hyde Park apartments near UChicago                | [https://www.domu.com/chicago/neighborhoods/hyde-park/apartments-near-university-of-chicago](https://www.domu.com/chicago/neighborhoods/hyde-park/apartments-near-university-of-chicago)                                     |
-| 11  | Reddit              | What are good places to live near campus          | [https://www.reddit.com/r/uchicago/comments/1k1uoz3/what_are_some_good_places_to_live/](https://www.reddit.com/r/uchicago/comments/1k1uoz3/what_are_some_good_places_to_live/)                                               |
-| 12  | UChicago GRAD       | Chicago neighborhoods guide for incoming students | [https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/other-chicago-neighborhoods/](https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/other-chicago-neighborhoods/) |
-| 13  | UChicago GRAD       | Apartment listings for grad students              | [https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/](https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/)                   |
+| 3   | Maroon Housing      | Off-campus life guide                             | [https://maroonhousing.com/off-campus-life](https://maroonhousing.com/off-campus-life)                                                                                                                                       |
+| 4   | Maroon Housing      | Hyde Park neighborhood guide                      | [https://maroonhousing.com/neighborhood-guide/hyde-park](https://maroonhousing.com/neighborhood-guide/hyde-park)                                                                                                             |
+| 5   | For Rent University | UChicago off-campus listings and info             | [https://www.forrentuniversity.com/University-of-Chicago](https://www.forrentuniversity.com/University-of-Chicago)                                                                                                           |
+| 6   | Prked.com           | Ultimate guide to UChicago off-campus housing     | [https://prked.com/post/your-ultimate-guide-to-university-of-chicago-off-campus-housing](https://prked.com/post/your-ultimate-guide-to-university-of-chicago-off-campus-housing)                                             |
+| 7   | Casita              | Student accommodation guide for UChicago          | [https://www.casita.com/student-accommodation/usa/chicago/university-of-chicago](https://www.casita.com/student-accommodation/usa/chicago/university-of-chicago)                                                             |
+| 8   | Uhomes              | UChicago off-campus listings and tips             | [https://en.uhomes.com/us/chicago/university-of-chicago](https://en.uhomes.com/us/chicago/university-of-chicago)                                                                                                             |
+| 9  | Domu                | Hyde Park apartments near UChicago                | [https://www.domu.com/chicago/neighborhoods/hyde-park/apartments-near-university-of-chicago](https://www.domu.com/chicago/neighborhoods/hyde-park/apartments-near-university-of-chicago)                                     |
+| 10  | Reddit              | What are good places to live near campus          | [https://www.reddit.com/r/uchicago/comments/1k1uoz3/what_are_some_good_places_to_live/](https://www.reddit.com/r/uchicago/comments/1k1uoz3/what_are_some_good_places_to_live/)                                               |
+| 11  | UChicago GRAD       | Chicago neighborhoods guide for incoming students | [https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/other-chicago-neighborhoods/](https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/other-chicago-neighborhoods/) |
+| 12  | UChicago GRAD       | Apartment listings for grad students              | [https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/](https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/)                   |
 
 
 ---
@@ -53,7 +52,6 @@ Off-campus housing experiences at the University of Chicago. This knowledge is v
 
 **Production tradeoff reflection:** accuracy vs. latency. all-MiniLM-L6-v2 is fast and lightweight but was trained on general web text, so it may not capture UChicago-specific terminology as well as a larger model. A model like text-embedding-3-large (OpenAI) or e5-large-v2 would retrieve more semantically precise chunks at the cost of higher latency and API expense. Context length is not a major concern here since chunks are short (500 tokens), so models with 512-token limits are fine. Multilingual support is irrelevant for this corpus. For production I'd also consider re-ranking retrieved chunks with a cross-encoder before passing them to the LLM, which improves precision without changing the embedding model.
 
-
 ---
 
 ## Evaluation Plan
@@ -73,7 +71,6 @@ Off-campus housing experiences at the University of Chicago. This knowledge is v
 ## Anticipated Challenges
 
 1. Noisy web content can key information across chunks. Many sources (Apartments.com, Domu) intersperse listing metadata (price, sqft, amenity icons) between substantive sentences. After stripping HTML, these fragments can end up glued to real advice, diluting the semantic signal of a chunk. A retrieval query about "safety in Hyde Park" might surface a chunk that's mostly price tables with one safety-related sentence attached. It's possible that the retrieved context looks relevant by similarity score but contains little usable information.
-
 2. Short Reddit comments can product low-density chunks. Reddit replies are often 1–3 sentences with implicit context. Because the referent lives in a parent comment that may be in a different chunk, the retrieved text will be hard for the LLM to ground into a useful answer. The model may either hallucinate the missing context or produce a vague non-answer, and it's difficult to detect this failure from retrieval scores alone.
 
 ---
@@ -84,53 +81,54 @@ Off-campus housing experiences at the University of Chicago. This knowledge is v
 │          RAG Pipeline               │
 └─────────────────────────────────────┘
 
-  1. Document Ingestion
-     ┌──────────────────────────────────┐
-     │  requests + BeautifulSoup        │
-     │  • Fetch HTML from 13 URLs       │
-     │  • Strip nav/footer/boilerplate  │
-     │  • Save raw text per source      │
-     └────────────────┬─────────────────┘
-                      │
-  2. Chunking
-     ┌────────────────▼─────────────────┐
-     │  LangChain RecursiveCharacter-   │
-     │  TextSplitter                    │
-     │  • chunk_size = 500 tokens       │
-     │  • chunk_overlap = 50 tokens     │
-     │  • Attach source URL metadata    │
-     └────────────────┬─────────────────┘
-                      │
-  3. Embedding + Vector Store
-     ┌────────────────▼─────────────────┐
-     │  sentence-transformers           │
-     │  (all-MiniLM-L6-v2)              │
-     │  • Embed each chunk              │
-     │  • Store in ChromaDB (local)     │
-     └────────────────┬─────────────────┘
-                      │
-  4. Retrieval
-     ┌────────────────▼─────────────────┐
-     │  ChromaDB similarity search      │
-     │  • Embed user query              │
-     │  • Return top-k=5 chunks         │
-     │  • Include source URL metadata   │
-     └────────────────┬─────────────────┘
-                      │
-  5. Generation
-     ┌────────────────▼─────────────────┐
-     │  Claude API (claude-haiku-4-5)   │
-     │  • System prompt enforces        │
-     │    grounding to retrieved chunks │
-     │  • Response cites source URLs    │
-     │  • CLI interface via input()     │
-     └──────────────────────────────────┘
+1. Document Ingestion
+┌──────────────────────────────────┐
+│  requests + BeautifulSoup        │
+│  • Fetch HTML                    │
+│  • Strip nav/footer/boilerplate  │
+│  • Save raw text per source      │
+└────────────────┬─────────────────┘
+             │
+2. Chunking
+┌────────────────▼─────────────────┐
+│  LangChain RecursiveCharacter-   │
+│  TextSplitter                    │
+│  • chunk_size = 500 tokens       │
+│  • chunk_overlap = 50 tokens     │
+│  • Attach source URL metadata    │
+└────────────────┬─────────────────┘
+             │
+3. Embedding + Vector Store
+┌────────────────▼─────────────────┐
+│  sentence-transformers           │
+│  (all-MiniLM-L6-v2)              │
+│  • Embed each chunk              │
+│  • Store in ChromaDB (local)     │
+└────────────────┬─────────────────┘
+             │
+4. Retrieval
+┌────────────────▼─────────────────┐
+│  ChromaDB similarity search      │
+│  • Embed user query              │
+│  • Return top-k=5 chunks         │
+│  • Include source URL metadata   │
+└────────────────┬─────────────────┘
+             │
+5. Generation
+┌────────────────▼─────────────────┐
+│  Claude API (claude-haiku-4-5)   │
+│  • System prompt enforces        │
+│    grounding to retrieved chunks │
+│  • Response cites source URLs    │
+│  • CLI interface via input()     │
+└──────────────────────────────────┘
 
 ---
 
 ## AI Tool Plan
 
 **Milestone 3 — Ingestion and chunking:**
+I'll prompt Claude with my source documents and ingestion plan to help plan the steps in `ingest.py` (loading information, cleaning text, chunking). 
 
 **Milestone 4 — Embedding and retrieval:**
 
