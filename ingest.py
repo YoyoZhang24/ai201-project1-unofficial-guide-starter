@@ -2,6 +2,7 @@ import requests
 from config import DOCS_PATH
 from bs4 import BeautifulSoup
 
+# clean html and save to documents folder
 
 SOURCE_URLS = {
     "chicago_maroon": "https://chicagomaroon.com/40981/news/navigating-the-maze-a-guide-to-off-campus-housing/",
@@ -18,24 +19,60 @@ SOURCE_URLS = {
     "ugrad_apartment_listings": "https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/",
 }
 
-# clean html and save to documents folder
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+}
+
+STRIP_TAGS = ["script", "style", "nav", "header", "footer", "aside", "form",
+              "button", "iframe", "noscript", "svg", "figure", "picture"]
+
+STRIP_PATTERNS = [
+    "cookie", "consent", "gdpr",           # cookie banners
+    "ad", "advertisement", "sponsored",     # ads
+    "share", "social", "follow",            # share/follow buttons
+    "sidebar", "widget", "promo",           # sidebars / promos
+    "breadcrumb", "pagination", "pager",    # navigation chrome
+    "related", "recommended", "trending",   # "read more" / related links
+    "comment-count", "reply-count",         # comment counts (not the comments themselves)
+    "newsletter", "subscribe", "signup",    # email capture
+    "menu", "toolbar", "topbar", "utility-bar",
+]
 
 def fetch_html(url) -> str | None:
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers=HEADERS, timeout=10)
         response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:
         print(f"Error fetching {url}: {e}")
         return None
 
+def _matches_boilderplate(tag) -> bool:
+    attrs = " ".join([
+        tag.get("id") or "",
+        " ".join(tag.get("class" or []),
+    ]).lower()
+    return any(pattern in attrs for pattern in STRIP_PATTERNS)
+
 def extract_text(html) -> str:
     soup = BeautifulSoup(html, 'html.parser')
-    for element in soup(['nav', 'footer', 'header', 'aside', 'script', 'style']):
-        element.decompose()
-    return soup.get_text(separator='\n', strip=True)
+    for tag in soup(STRIP_TAGS):
+        tag.decompose()
+    
+    for tag in soup.find_all(True):
+        if _matches_boilderplate(tag):
+            tag.decompose()
+    
+    text = soup.get_text(separator=' ', strip=True)
+    text = re.sub(r'\s+', ' ', text)
+    text = re.sub(r"\b(Read more|Share|Subscribe|Sign up|Follow us|Cookie policy|Accept all cookies?)\b", 
+                "", text, flags=re.IGNORECASE)
+    return text.strip()
 
 def __main__():
+    if not os.path.exists(DOCS_PATH):
+        os.makedirs(DOCS_PATH)
+        
     for filename, url in SOURCE_URLS.items():
         html = fetch_html(url)
         if html:
