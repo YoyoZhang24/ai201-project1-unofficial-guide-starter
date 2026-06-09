@@ -16,19 +16,19 @@ Off-campus housing experiences at the University of Chicago. This knowledge is v
 ## Documents
 
 
-| #   | Source              | Description                                       | URL or location                                                                                                                                                                                                              |
-| --- | ------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Chicago Maroon      | Article guide to navigating off-campus housing    | [https://chicagomaroon.com/40981/news/navigating-the-maze-a-guide-to-off-campus-housing/](https://chicagomaroon.com/40981/news/navigating-the-maze-a-guide-to-off-campus-housing/)                                           |
-| 2   | Apartments.com      | Listings and reviews near UChicago                | [https://www.apartments.com/off-campus-housing/il/chicago/university-of-chicago/](https://www.apartments.com/off-campus-housing/il/chicago/university-of-chicago/)                                                           |
-| 3   | Maroon Housing      | Off-campus life guide                             | [https://maroonhousing.com/off-campus-life](https://maroonhousing.com/off-campus-life)                                                                                                                                       |
-| 4   | Maroon Housing      | Hyde Park neighborhood guide                      | [https://maroonhousing.com/neighborhood-guide/hyde-park](https://maroonhousing.com/neighborhood-guide/hyde-park)                                                                                                             |
-| 5   | Prked.com           | Ultimate guide to UChicago off-campus housing     | [https://prked.com/post/your-ultimate-guide-to-university-of-chicago-off-campus-housing](https://prked.com/post/your-ultimate-guide-to-university-of-chicago-off-campus-housing)                                             |
-| 6   | Casita              | Student accommodation guide for UChicago          | [https://www.casita.com/student-accommodation/usa/chicago/university-of-chicago](https://www.casita.com/student-accommodation/usa/chicago/university-of-chicago)                                                             |
-| 7   | Uhomes              | UChicago off-campus listings and tips             | [https://en.uhomes.com/us/chicago/university-of-chicago](https://en.uhomes.com/us/chicago/university-of-chicago)                                                                                                             |
-| 8  | Domu                | Hyde Park apartments near UChicago                | [https://www.domu.com/chicago/neighborhoods/hyde-park/apartments-near-university-of-chicago](https://www.domu.com/chicago/neighborhoods/hyde-park/apartments-near-university-of-chicago)                                     |
-| 9  | Reddit              | What are good places to live near campus          | [https://www.reddit.com/r/uchicago/comments/1k1uoz3/what_are_some_good_places_to_live/](https://www.reddit.com/r/uchicago/comments/1k1uoz3/what_are_some_good_places_to_live/)                                               |
-| 10  | UChicago GRAD       | Chicago neighborhoods guide for incoming students | [https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/other-chicago-neighborhoods/](https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/other-chicago-neighborhoods/) |
-| 11  | UChicago GRAD       | Apartment listings for grad students              | [https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/](https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/)                   |
+| #   | Source         | Description                                       | URL or location                                                                                                                                                                                                              |
+| --- | -------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Chicago Maroon | Article guide to navigating off-campus housing    | [https://chicagomaroon.com/40981/news/navigating-the-maze-a-guide-to-off-campus-housing/](https://chicagomaroon.com/40981/news/navigating-the-maze-a-guide-to-off-campus-housing/)                                           |
+| 2   | Apartments.com | Listings and reviews near UChicago                | [https://www.apartments.com/off-campus-housing/il/chicago/university-of-chicago/](https://www.apartments.com/off-campus-housing/il/chicago/university-of-chicago/)                                                           |
+| 3   | Maroon Housing | Off-campus life guide                             | [https://maroonhousing.com/off-campus-life](https://maroonhousing.com/off-campus-life)                                                                                                                                       |
+| 4   | Maroon Housing | Hyde Park neighborhood guide                      | [https://maroonhousing.com/neighborhood-guide/hyde-park](https://maroonhousing.com/neighborhood-guide/hyde-park)                                                                                                             |
+| 5   | Prked.com      | Ultimate guide to UChicago off-campus housing     | [https://prked.com/post/your-ultimate-guide-to-university-of-chicago-off-campus-housing](https://prked.com/post/your-ultimate-guide-to-university-of-chicago-off-campus-housing)                                             |
+| 6   | Casita         | Student accommodation guide for UChicago          | [https://www.casita.com/student-accommodation/usa/chicago/university-of-chicago](https://www.casita.com/student-accommodation/usa/chicago/university-of-chicago)                                                             |
+| 7   | Uhomes         | UChicago off-campus listings and tips             | [https://en.uhomes.com/us/chicago/university-of-chicago](https://en.uhomes.com/us/chicago/university-of-chicago)                                                                                                             |
+| 8   | Domu           | Hyde Park apartments near UChicago                | [https://www.domu.com/chicago/neighborhoods/hyde-park/apartments-near-university-of-chicago](https://www.domu.com/chicago/neighborhoods/hyde-park/apartments-near-university-of-chicago)                                     |
+| 9   | Reddit         | What are good places to live near campus          | [https://www.reddit.com/r/uchicago/comments/1k1uoz3/what_are_some_good_places_to_live/](https://www.reddit.com/r/uchicago/comments/1k1uoz3/what_are_some_good_places_to_live/)                                               |
+| 10  | UChicago GRAD  | Chicago neighborhoods guide for incoming students | [https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/other-chicago-neighborhoods/](https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/other-chicago-neighborhoods/) |
+| 11  | UChicago GRAD  | Apartment listings for grad students              | [https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/](https://grad.uchicago.edu/admissions/relocating-to-chicago/finding-an-apartment/apartment-listings/)                   |
 
 
 ---
@@ -81,45 +81,46 @@ Off-campus housing experiences at the University of Chicago. This knowledge is v
 └─────────────────────────────────────┘
 
 1. Document Ingestion
-┌──────────────────────────────────┐
-│  requests + BeautifulSoup        │
-│  • Fetch HTML                    │
-│  • Strip nav/footer/boilerplate  │
-│  • Save raw text per source      │
-└────────────────┬─────────────────┘
-             │
-2. Chunking
-┌────────────────▼─────────────────┐
-│  LangChain RecursiveCharacter-   │
-│  TextSplitter                    │
-│  • chunk_size = 500 tokens       │
-│  • chunk_overlap = 50 tokens     │
-│  • Attach source URL metadata    │
-└────────────────┬─────────────────┘
-             │
-3. Embedding + Vector Store
-┌────────────────▼─────────────────┐
-│  sentence-transformers           │
-│  (all-MiniLM-L6-v2)              │
-│  • Embed each chunk              │
-│  • Store in ChromaDB (local)     │
-└────────────────┬─────────────────┘
-             │
-4. Retrieval
-┌────────────────▼─────────────────┐
-│  ChromaDB similarity search      │
-│  • Embed user query              │
-│  • Return top-k=5 chunks         │
-│  • Include source URL metadata   │
-└────────────────┬─────────────────┘
-             │
-5. Generation
-┌────────────────▼─────────────────┐
-│  Claude API (claude-haiku-4-5)   │
-│  • System prompt enforces        │
-│    grounding to retrieved chunks │
-│  • Response cites source URLs    │
-│  • CLI interface via input()     │
+
+┌──────────────────────────────────┐  
+│  requests + BeautifulSoup        │  
+│  • Fetch HTML                    │  
+│  • Strip nav/footer/boilerplate  │  
+│  • Save raw text per source      │  
+└────────────────┬─────────────────┘  
+             │  
+2. Chunking  
+┌────────────────▼─────────────────┐  
+│  LangChain RecursiveCharacter-   │  
+│  TextSplitter                    │  
+│  • chunk_size = 500 tokens       │  
+│  • chunk_overlap = 50 tokens     │  
+│  • Attach source URL metadata    │  
+└────────────────┬─────────────────┘  
+             │  
+3. Embedding + Vector Store  
+┌────────────────▼─────────────────┐  
+│  sentence-transformers           │  
+│  (all-MiniLM-L6-v2)              │  
+│  • Embed each chunk              │  
+│  • Store in ChromaDB (local)     │  
+└────────────────┬─────────────────┘  
+             │  
+4. Retrieval  
+┌────────────────▼─────────────────┐  
+│  ChromaDB similarity search      │  
+│  • Embed user query              │  
+│  • Return top-k=5 chunks         │  
+│  • Include source URL metadata   │  
+└────────────────┬─────────────────┘  
+             │  
+5. Generation  
+┌────────────────▼─────────────────┐  
+│  llama-3.3-70b-versatile         |
+│  • System prompt enforces        │  
+│    grounding to retrieved chunks │  
+│  • Response cites source URLs    │  
+│  • CLI interface via input()     │  
 └──────────────────────────────────┘
 
 ---
@@ -127,8 +128,10 @@ Off-campus housing experiences at the University of Chicago. This knowledge is v
 ## AI Tool Plan
 
 **Milestone 3 — Ingestion and chunking:**
-I'll prompt Claude with my source documents and ingestion plan to help plan the steps in `ingest.py` (loading information, cleaning text, chunking). 
+I'll prompt Claude with my source documents and ingestion plan to help plan the steps in `ingest.py` and `chunk.py` (loading information, cleaning text, chunking). 
 
 **Milestone 4 — Embedding and retrieval:**
+I'll prompt Claude with my plan to make sure that my embedding and retrieval steps are correct in  `retriever.py`. 
 
 **Milestone 5 — Generation and interface:**
+I'll prompt Claude to improve the interface with Gradio and design a system prompt to feed to the LLM. 
